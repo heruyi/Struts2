@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="web" name="Web">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/web/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/web" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.5.23" level="application_server_libraries" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/web/WEB-INF/lib" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/apps/blank/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/apps/blank/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/apps/mailreader/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/apps/portlet/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/apps/portlet/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/apps/rest-showcase/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/apps/rest-showcase/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/apps/showcase/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/apps/showcase/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/bundles/admin/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/bundles/demo/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/core/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/core/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/cdi/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/cdi/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/codebehind/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/codebehind/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/config-browser/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/convention/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/convention/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/dojo/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/dojo/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/dwr/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/embeddedjsp/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/embeddedjsp/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/gxp/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/jasperreports/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/java8-support/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/javatemplates/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/javatemplates/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/jfreechart/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/jfreechart/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/jsf/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/json/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/json/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/junit/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/junit/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/osgi/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/osgi/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/oval/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/oval/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/pell-multipart/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/plexus/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/portlet-tiles/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/portlet/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/portlet/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/rest/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/rest/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/sitegraph/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/sitegraph/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/sitemesh/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/spring/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/spring/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/struts1/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/struts1/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/testng/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/testng/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/tiles/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/tiles/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/plugins/tiles3/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/xwork-core/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../struts-2.3.35-src.zip!/struts-2.3.35/src/xwork-core/src/test/java" />
+        </SOURCES>
+        <jarDirectory url="file://$MODULE_DIR$/web/WEB-INF/lib" recursive="false" />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="lib" level="project" />
+  </component>
+</module>
