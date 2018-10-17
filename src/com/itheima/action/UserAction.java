@@ -6,14 +6,37 @@ import com.itheima.service.impl.IUserServiceImpl;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import org.apache.struts2.ServletActionContext;
+import org.apache.struts2.util.TokenHelper;
 
-import javax.servlet.ServletContext;
 import javax.servlet.http.HttpSession;
+import java.io.File;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class UserAction extends ActionSupport implements ModelDriven<User> {
 
     private User user = new User();
     private IUserService service = new IUserServiceImpl();
+
+    public File getUpload() {
+        return upload;
+    }
+
+    public void setUpload(File upload) {
+        this.upload = upload;
+    }
+
+    public String getUploadFileName() {
+        return uploadFileName;
+    }
+
+    public void setUploadFileName(String uploadFileName) {
+        this.uploadFileName = uploadFileName;
+    }
+
+    public UserAction() {
+    }
 
     @Override
     public User getModel() {
@@ -37,5 +60,34 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
         HttpSession session = ServletActionContext.getRequest().getSession();
         session.setAttribute("user",dbUser);
         return SUCCESS;
+    }
+
+    private File upload;
+    private String uploadFileName;
+
+    public String add() throws Exception {
+
+        String filePath = ServletActionContext.getServletContext().getRealPath("/files");
+        String dir = generateChildPath(filePath);
+        String fileName = TokenHelper.generateGUID() + "_" + uploadFileName;
+        user.setPath(dir);
+        user.setFilename(fileName);
+        upload.renameTo(new File(filePath + File.separator + dir,fileName));
+        int res = service.saveUser(user);
+        if( res > 0){
+            return SUCCESS;
+        }
+        return null;
+    }
+
+    private String generateChildPath(String filePath) {
+        Date date = new Date();
+        DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        String time = format.format(date);
+        File file = new File(filePath,time);
+        if (!file.exists()){
+            file.mkdirs();
+        }
+        return time;
     }
 }
