@@ -13,6 +13,7 @@ import java.io.File;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 public class UserAction extends ActionSupport implements ModelDriven<User> {
 
@@ -89,5 +90,20 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
             file.mkdirs();
         }
         return time;
+    }
+
+    private List<User> users;
+
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<User> users) {
+        this.users = users;
+    }
+
+    public String findAll(){
+        users = service.findAllUser();
+        return SUCCESS;
     }
 }
