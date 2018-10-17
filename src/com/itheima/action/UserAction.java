@@ -3,6 +3,7 @@ package com.itheima.action;
 import com.itheima.domain.User;
 import com.itheima.service.IUserService;
 import com.itheima.service.impl.IUserServiceImpl;
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import org.apache.struts2.ServletActionContext;
@@ -10,6 +11,8 @@ import org.apache.struts2.util.TokenHelper;
 
 import javax.servlet.http.HttpSession;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -104,6 +107,42 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
 
     public String findAll(){
         users = service.findAllUser();
+        return SUCCESS;
+    }
+
+    public String findUserById(){
+        user = service.findUserById(user.getUserID());
+        ActionContext.getContext().getValueStack().push(user);
+        return SUCCESS;
+    }
+
+
+    private InputStream inputStream;
+
+    public InputStream getInputStream() {
+        return inputStream;
+    }
+
+    public void setInputStream(InputStream inputStream) {
+        this.inputStream = inputStream;
+    }
+
+    public String getOldFileName() {
+        return oldFileName;
+    }
+
+    public void setOldFileName(String oldFileName) {
+        this.oldFileName = oldFileName;
+    }
+
+    private String oldFileName;
+
+    public String download()throws Exception {
+
+        User dbUser = service.findUserById(user.getUserID());
+        String filePath = ServletActionContext.getServletContext().getRealPath("/files");
+        oldFileName = dbUser.getFilename().substring(dbUser.getFilename().indexOf("_")+1);
+        inputStream = new FileInputStream(filePath + File.separator + dbUser.getPath() + File.separator + dbUser.getFilename());
         return SUCCESS;
     }
 }

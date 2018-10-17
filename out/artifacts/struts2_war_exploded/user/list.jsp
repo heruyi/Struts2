@@ -180,10 +180,10 @@
 												</a>
 											</td>
 											<td align="center" style="HEIGHT: 22px">
-												<a href="${pageContext.request.contextPath}/user/view.jsp?userID=15">
+												<s:a action="findUserById" namespace="/user">
 													<s:param name="userID" value="#user.userID"/>
 													<img src="${pageContext.request.contextPath}/images/button_view.gif" border="0" style="CURSOR: hand">
-												</a>
+												</s:a>
 											</td>
 											<td align="center" style="HEIGHT: 22px">
 												<a href="${pageContext.request.contextPath}/user/list.jsp?userID=15">
