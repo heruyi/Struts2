@@ -22,9 +22,9 @@ public class JNDIUtil {
 	static{
 		try {
 			Context initCtx = new InitialContext();
-			ds = (DataSource)initCtx.lookup("java:comp/env/jdbc/day27");//"jdbc/day13"它是数据源名称
+			ds = (DataSource)initCtx.lookup("java:comp/env/jdbc/day28");
 		} catch (NamingException e) {
-			throw new ExceptionInInitializerError("初始化连接失败");
+			throw new ExceptionInInitializerError(e.toString());
 		}
 	}
 	

@@ -1,6 +1,8 @@
 package com.itheima.domain;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     private Integer userID;
     private String userName;
     private String logonName;

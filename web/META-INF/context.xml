@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context>
+  <Context path="/struts" docBase="struts"
+           crossContext="true" reloadable="true" debug="1">
   <Resource name="jdbc/day28" auth="Container" type="javax.sql.DataSource"
                maxActive="100" maxIdle="30" maxWait="10000"
                username="root" password="root" driverClassName="com.mysql.jdbc.Driver"
