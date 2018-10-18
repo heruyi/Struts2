@@ -145,4 +145,12 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
         inputStream = new FileInputStream(filePath + File.separator + dbUser.getPath() + File.separator + dbUser.getFilename());
         return SUCCESS;
     }
+
+    public String delete()throws Exception{
+        int res = service.removeUser(user.getUserID());
+        if (res > 0){
+            return SUCCESS;
+        }
+        return null;
+    }
 }

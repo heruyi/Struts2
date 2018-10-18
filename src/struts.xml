@@ -42,6 +42,10 @@
             </result>
         </action>
 
+        <action name="delete" class="com.itheima.action.UserAction" method="delete">
+            <result type="redirectAction">findAll</result>
+        </action>
+
     </package>
 
 </struts>
