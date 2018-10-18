@@ -174,10 +174,10 @@
 												<s:property value="#user.education"/>
 											</td>
 											<td align="center" style="HEIGHT: 22px">
-												<a href="${pageContext.request.contextPath}/user/edit.jsp?userID=15">
+												<s:a action="editUI" namespace="/user">
 													<s:param name="userID" value="#user.userID"/>
 													<img src="${pageContext.request.contextPath}/images/i_edit.gif" border="0" style="CURSOR: hand">
-												</a>
+												</s:a>
 											</td>
 											<td align="center" style="HEIGHT: 22px">
 												<s:a action="findUserById" namespace="/user">

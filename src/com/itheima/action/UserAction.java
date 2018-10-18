@@ -153,4 +153,11 @@ public class UserAction extends ActionSupport implements ModelDriven<User> {
         }
         return null;
     }
+
+    public String editUI() throws Exception{
+        user = service.findUserById(user.getUserID());
+        ActionContext.getContext().getValueStack().push(user);
+        return null;
+    }
+
 }

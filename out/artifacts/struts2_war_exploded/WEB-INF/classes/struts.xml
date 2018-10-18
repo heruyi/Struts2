@@ -10,6 +10,22 @@
     <constant name="struts.ui.theme" value="simple" />
     <constant name="struts.ognl.allowStaticMethodAccess" value="true" />
 
+    <package name="mydefault" extends="struts-default" abstract="true">
+        <interceptors>
+            <interceptor name="CheckLoginInterceptor" class="com.itheima.interceptor.CheckLoginInterceptor"></interceptor>
+            <interceptor-stack name="myDefaultStack">
+                <interceptor-ref name="defaultStack"></interceptor-ref>
+                <interceptor-ref name="CheckLoginInterceptor"></interceptor-ref>
+            </interceptor-stack>
+        </interceptors>
+        <!-- 重置默认拦截器栈 -->
+        <default-interceptor-ref name="myDefaultStack"></default-interceptor-ref>
+        <!-- 全局结果视图 -->
+        <global-results>
+            <result name="login">/login/login.jsp</result>
+        </global-results>
+    </package>
+
     <package name="p1" extends="struts-default" >
         <action name="login" class="com.itheima.action.UserAction" method="login">
             <result name="success" >/login/home.jsp</result>
@@ -17,9 +33,9 @@
         </action>
     </package>
 
-    <package name="user" extends="struts-default" namespace="/user">
+    <package name="user" extends="mydefault" namespace="/user">
         <action name="add" class="com.itheima.action.UserAction" method="add">
-            <interceptor-ref name="defaultStack">
+            <interceptor-ref name="myDefaultStack">
                 <param name="fileUpload.allowedExtensions">.doc,.docx</param>
             </interceptor-ref>
             <result>/user/list.jsp</result>
@@ -44,6 +60,10 @@
 
         <action name="delete" class="com.itheima.action.UserAction" method="delete">
             <result type="redirectAction">findAll</result>
+        </action>
+
+        <action name="editUI" class="com.itheima.action.UserAction" method="editUI">
+            <result >/user/edit.jsp</result>
         </action>
 
     </package>
